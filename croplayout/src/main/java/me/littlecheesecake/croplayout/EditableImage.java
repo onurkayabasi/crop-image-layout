@@ -17,6 +17,13 @@ public class EditableImage {
     private int             viewWidth;
     private int             viewHeight;
 
+    public EditableImage(Bitmap originalImage) {
+        this.originalImage = originalImage;
+
+        //init the search box
+        originalBox = new ScalableBox();
+    }
+
     public EditableImage(String localPath) {
         //load image from path to bitmap
         originalImage = ImageHelper.getBitmapFromPath(localPath);
